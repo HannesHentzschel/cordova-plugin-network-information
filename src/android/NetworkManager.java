@@ -43,6 +43,7 @@ public class NetworkManager extends CordovaPlugin {
     public static int NOT_REACHABLE = 0;
     public static int REACHABLE_VIA_CARRIER_DATA_NETWORK = 1;
     public static int REACHABLE_VIA_WIFI_NETWORK = 2;
+    public static int CONNECTION_TIMEOUT_CHECK = 10000;
 
     public static final String WIFI = "wifi";
     public static final String WIMAX = "wimax";
@@ -86,6 +87,7 @@ public class NetworkManager extends CordovaPlugin {
 
     ConnectivityManager sockMan;
     BroadcastReceiver receiver;
+    BroadcastReceiver receiverIdleMode;
     private JSONObject lastInfo = null;
 
     /**
